@@ -1,1 +1,2 @@
-# CS411SU20-JAVA
+# CS 411 Summer 2020
+## Course Project: Website
