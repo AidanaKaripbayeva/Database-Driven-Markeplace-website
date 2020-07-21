@@ -11,7 +11,7 @@ CREATE TABLE Customer(
 );
 CREATE TABLE Product(
 	Product_ID INTEGER NOT NULL,
-	Prodect_Name VARCHAR(50),
+	Product_Name VARCHAR(50),
   Seller_ID INTEGER NOT NULL,
 	Product_image VARCHAR(200),
 	Price_Sell REAL,
