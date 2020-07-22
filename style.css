@@ -1,0 +1,22 @@
+body{
+  color: #555555;
+  font: normal 16px Arial, Helvetica, sans-serif;
+  line-height: 1.6em;
+  margin: 0;
+  /* background-image: url(images/logo.png); */
+}
+h1{
+  color:orange
+}
+
+
+.signupForm{
+  width: 300px;
+  background: #fff;
+  padding: 20px;
+  margin: 8% atuo;
+  text-align: center;
+}
+.signupBtn{
+  background-color: #1c8adb;
+}

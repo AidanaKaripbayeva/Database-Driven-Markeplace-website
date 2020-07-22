@@ -1,16 +1,15 @@
 CREATE TABLE Customer(
-	User_ID INTEGER NOT NULL,
+	User_ID int(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
 	User_Name VARCHAR(50),
 	Email VARCHAR(50),
 	User_Password VARCHAR(50),
 	Rating REAL,
 	Address VARCHAR(50),
 	Phone VARCHAR(50),
-	Zipcode INTEGER,
-	PRIMARY KEY(User_ID)
+	Zipcode INTEGER
 );
 CREATE TABLE Product(
-	Product_ID INTEGER NOT NULL,
+	Product_ID int(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
 	Product_Name VARCHAR(50),
   Seller_ID INTEGER NOT NULL,
 	Product_image VARCHAR(200),
@@ -22,11 +21,10 @@ CREATE TABLE Product(
 	Review VARCHAR(300),
 	Category VARCHAR(50),
 	Product_Description VARCHAR(500),
-	FOREIGN KEY(Seller_ID) References Customer(User_ID) ON UPDATE CASCADE ON DELETE CASCADE,
-	PRIMARY KEY(Product_ID)
+	FOREIGN KEY(Seller_ID) References Customer(User_ID) ON UPDATE CASCADE ON DELETE CASCADE
 );
 CREATE TABLE Purchase_Record(
-	Purchase_ID INTEGER NOT NULL,
+	Purchase_ID int(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
 	Seller_ID INTEGER NOT NULL,
 	Buyer_ID INTEGER NOT NULL,
 	Product_ID INTEGER NOT NULL,
@@ -36,8 +34,7 @@ CREATE TABLE Purchase_Record(
 	Rating_Description_VS_Quality REAL,
 	Rating_User_Satisfaction REAL,
 	FOREIGN KEY(Buyer_ID) References Customer(User_ID) ON UPDATE CASCADE ON DELETE CASCADE,
-  FOREIGN KEY(Seller_ID, Product_ID) References Product(Seller_ID, Product_ID) ON UPDATE CASCADE ON DELETE CASCADE,
-  PRIMARY KEY(Purchase_ID)
+  FOREIGN KEY(Seller_ID, Product_ID) References Product(Seller_ID, Product_ID) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 INSERT INTO Customer VALUES
