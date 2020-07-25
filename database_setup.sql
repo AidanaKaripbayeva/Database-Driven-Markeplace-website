@@ -17,7 +17,7 @@ CREATE TABLE Product(
 	Price_New REAL,
 	Price_Recommend REAL,
 	Date_Post DATE,
-	Sold_Or_Not INTEGER,
+	Sold_Or_Not INTEGER DEFAULT 0,
 	Category VARCHAR(50),
 	Product_Description VARCHAR(500),
 	FOREIGN KEY(Seller_ID) References Customer(User_ID) ON UPDATE CASCADE ON DELETE CASCADE
@@ -32,7 +32,7 @@ CREATE TABLE Purchase_Record(
 	Rating_Quality REAL,
 	Rating_Description_VS_Quality REAL,
 	Rating_User_Satisfaction REAL,
-	Review VARCHAR(300),
+	Review VARCHAR(300) DEFAULT 'no review yet',
 	FOREIGN KEY(Buyer_ID) References Customer(User_ID) ON UPDATE CASCADE ON DELETE CASCADE,
   FOREIGN KEY(Seller_ID, Product_ID) References Product(Seller_ID, Product_ID) ON UPDATE CASCADE ON DELETE CASCADE
 );
