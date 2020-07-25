@@ -3,11 +3,15 @@ body{
   font: normal 16px Arial, Helvetica, sans-serif;
   line-height: 1.6em;
   margin: 0;
-  /* background-image: url(images/logo.png); */
+  
 }
 h1{
   color:orange
 }
+
+
+ Set a style for all buttons 
+
 
 
 .signupForm{
@@ -18,5 +22,5 @@ h1{
   text-align: center;
 }
 .signupBtn{
-  background-color: #1c8adb;
+  background-color: ##FEA101;
 }

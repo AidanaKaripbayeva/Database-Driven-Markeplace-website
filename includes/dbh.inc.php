@@ -1,15 +1,12 @@
 <?php
 
+$servername = "localhost";
+$dBUsername = "root";
+$dBPassword = "1312Vard#@^";
+$dBName = "database_setup";
 
-$DB_HOST = 'localhost';
-$DB_USER = 'root';
-$DB_PASSWORD = '';
-$DB_NAME = 'MarketPlaceJava';
-
-$conn = @mysqli_connect($DB_HOST, $DB_USER, $DB_PASSWORD, $DB_NAME);
+$conn = mysqli_connect($servername, $dBUsername, $dBPassword, $dBName);
 
 if (!$conn) {
-  die("Connection failed: ".mysqli_connect_error());
+	die("Connection failed: ".mysqli_connect_error());
 }
-
-?>

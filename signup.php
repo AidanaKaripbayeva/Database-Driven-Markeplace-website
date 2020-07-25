@@ -9,32 +9,33 @@
         <?php
           if (isset($_GET['error'])) {
             if ($_GET['error'] == "emptyfields") {
-              echo '<p> Please fill all fields.</p>';
-            } else if ($_GET['error'] == "invalidemail") {
-              echo '<p> Please check your email.</p>';
-            } else if ($_GET['error'] == "passwordcheck") {
-              echo '<p> Please check your password.</p>';
+              echo '<p class = "signuperror">Fill in All the fields!</p>';
             }
-          } else if (isset($_GET['signup'])) {
-            if ($_GET['signup'] == "sucess") {
-              echo '<p> Signup sucessful!</p>';
+            else if ($_GET['error'] == "invalidmailuid") {
+              echo '<p class = "signuperror">Fill in All fields!</p>';
             }
-
+            else if ($_GET['error'] == "invalidUsername") {
+              echo '<p class = "signuperror">Enter a valid User Name (Make sure no invalid characters)!</p>';
+            }
+            else if ($_GET['error'] == "passwordcheck") {
+              echo '<p class = "signuperror">Incorrect Password!</p>';
+            }
+            else if ($_GET['error'] == "usertaken") {
+              echo '<p class = "signuperror">This Username is already taken choose a different Username</p>';
+            }
+          }
+          else if (isset($_GET['signup'])) {
+            if ($_GET['signup'] == "success") {
+              echo '<p class = "signupsuccess">Great Job!! Your Signup was successful!</p>';
+            }
           }
         ?>
-
-        <p> Sign up to buy or sell different products </p>
-
-        <form class ="signupForm" action = "includes/signup.inc.php" method = "post">
-          <input type = "text" name ="username" placeholder = "Username">
-          <input type = "text" name ="mail" placeholder = "E-mail">
-          <input type = "password" name ="pwd" placeholder = "Password">
-          <input type = "password" name ="pwd-repeat" placeholder = "Repeat password">
-          <input type = "text" name ="address" placeholder = "Address">
-          <input type = "text" name ="phone" placeholder = "Phone number">
-          <input type = "text" name ="zipcode" placeholder = "Zipcode">
-          <p> <span> </span></p>
-          <button class="signupBtn" type="submit" name="signup-submit">Signup</buttom>
+        <form action="includes/signup.inc.php" method="post">
+          <input type="text" name="uid" placeholder="Username">
+          <input type="text" name="mail" placeholder="Email">
+          <input type="password" name="pwd" placeholder="Password">
+          <input type="password" name="pwd" placeholder="Repeat Password">
+          <button type="submit" name="signup-submit">Signup</button>
         </form>
       </section>
     </div>
