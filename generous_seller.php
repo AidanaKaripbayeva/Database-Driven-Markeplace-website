@@ -14,7 +14,7 @@
 
 require_once('mysqli_connect.php');
 
-$top_seller = mysqli_query($dbc, "SELECT C.User_Name, P.Product_Name, MIN(P.Price_Sell) as Price, P.Category FROM product P JOIN customer C ON P.Seller_ID = C.User_ID GROUP BY `Category` ") or die(mysqli_error());
+$top_seller = mysqli_query($dbc, "SELECT C.User_Name, P.Product_Name, MIN(P.Price_Sell) as Price, P.Category FROM Product P JOIN Customer C ON P.Seller_ID = C.User_ID GROUP BY `Category` ") or die(mysqli_error($dbc));
 
 echo "<table border='1'>
 <tr>

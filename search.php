@@ -245,8 +245,9 @@ body {
         // makes sure nobody uses SQL injection
 
 
-        $raw_results = mysqli_query($dbc, "SELECT * FROM product
-            WHERE ((`Product_Name` LIKE '%".$query."%') OR (`Product_Description` LIKE '%".$query."%')) AND (Price_Sell >= $min_price) AND (Price_Sell <= $max_price) ORDER BY Price_Sell DESC") or die(mysqli_error());
+
+        $raw_results = mysqli_query($dbc, "SELECT * FROM Product
+            WHERE ((`Product_Name` LIKE '%".$query."%') OR (`Product_Description` LIKE '%".$query."%')) AND (Price_Sell >= $min_price) AND (Price_Sell <= $max_price) ORDER BY Price_Sell DESC") or die(mysqli_error($dbc));
 
 
         // if($min_price != -1 and $max_price != 100000000) {

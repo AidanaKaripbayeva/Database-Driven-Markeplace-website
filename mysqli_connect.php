@@ -1,6 +1,6 @@
 <?php
 DEFINE ('DB_USER', 'root');
-DEFINE ('DB_PASSWORD', '7617440aS!');
+DEFINE ('DB_PASSWORD', '');
 DEFINE ('DB_HOST', 'localhost');
 DEFINE ('DB_NAME', 'MarketPlaceJava');
 

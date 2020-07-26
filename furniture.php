@@ -16,7 +16,7 @@
 
 
 
-    $raw_results = mysqli_query($dbc, "SELECT * FROM product
+    $raw_results = mysqli_query($dbc, "SELECT * FROM Product
         WHERE (`Category` LIKE '%Furniture%')") or die(mysqli_error());
 
     // * means that it selects all fields, you can also write: `id`, `title`, `text`
