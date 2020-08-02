@@ -5,6 +5,9 @@ if (isset($_POST['signup-submit'])) {
 
 	$username = $_POST['uid'];
 	$email = $_POST['mail'];
+	$phone = $_POST['phone'];
+	// $address = $_POST['address']
+	$zip = $_POST['zip'];
 	$password = $_POST['pwd'];
 	$passwordrepeat = $_POST['pwd'];
 
@@ -54,7 +57,7 @@ if (isset($_POST['signup-submit'])) {
 			}
 			else{
 
-				$sql = "INSERT INTO Customer (User_Name, Email, User_Password) VALUES(?, ?, ?)";
+				$sql = "INSERT INTO Customer (User_Name, Email, Phone, Zipcode, User_Password) VALUES(?, ?, ?, ?, ?)";
 				$stmt = mysqli_stmt_init($conn);
 				if (!mysqli_stmt_prepare($stmt, $sql)) {
 					header("Location: ../signup.php?error=sqlerror");
@@ -65,7 +68,7 @@ if (isset($_POST['signup-submit'])) {
 				$hashedPwd = password_hash($password, PASSWORD_DEFAULT);
 
 
-				mysqli_stmt_bind_param($stmt, "sss", $username, $email, $hashedPwd);
+				mysqli_stmt_bind_param($stmt, "sssss", $username, $email, $phone, $zip, $hashedPwd);
 				mysqli_stmt_execute($stmt);
 				header("Location: ../signup.php?signup=success");
 				exit();
