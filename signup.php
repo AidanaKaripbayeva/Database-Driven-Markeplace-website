@@ -31,7 +31,8 @@ label{
 .button:hover{
   background: #3234ad;
 }
-
+.formfield * {
+  display: inline-block;}
 </style>
 <body>
   <main>
