@@ -73,6 +73,12 @@ label{
           <label for="username"><b>Email</b></label>
           <input type="text" name="mail" placeholder="Email"></p> 
           <p>
+          <label for="username"><b>Phone</b></label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" placeholder="000-000-0000"></p> 
+          <p>
+          <label for="username"><b>Zip Code</b></label>
+          <input type="number" name="zip" placeholder="Zip Code"></p> 
+          <p>
           <label for="username"><b>Password</b></label>
           <input type="password" name="pwd" placeholder="Password"></p>
           <p>
