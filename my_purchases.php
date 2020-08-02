@@ -1,101 +1,178 @@
-<!DOCTYPE html>
+<?php
 
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>UIUC Markeplace</title>
-    <link rel = "stylesheet" href='style.css'>
-  </head>
+require "my_products_header.php";
+//   if (isset($_POST['save'])){
+//     require 'dbh.inc.php';
+//     $userid = $_SESSION['User_ID'];
+//     $uID = $_POST['uID'];
+//     $ratedIndex = $_POST['ratedIndex'];
+//     $ratedIndex++;
 
-  <?php
-  session_start();
-  /*session is started if you don't write this line can't use $_Session  global variable*/
-  ?>
-<body class='wrapper'>
-  <nav>
-    <ul>
-      <li> <a href="testphp.php">Home</a></li>
-      <li> <a href="my_products.php">My Products</a></li>
-      <li> <a href="my_purchases.php"><h4 class="chosen">My Purchases</h4></a></li>
-      <li> <a href="my_favorites.php">My Favorites</a></li>
-      <li> <a href="my_reviews.php">My Reviews</a></li>
-      <li> <a href="my_profile.php">My Profile</a></li>
-      <li> <form action="includes/logout.inc.php" method="post">
-            <button type="submit" name="logout-submit">LogOut</button>
-          </form>
-      </li>
+//     $sql = "UPDATE Purchase_Record SET Rating_Quality =? WHERE Buyer_ID=$userid";
+//     $stmt = mysqli_stmt_init($conn);
+//     if (!mysqli_stmt_prepare($stmt, $sql)) {
+//       header("Location: ../signup.php?error=sqlerror");
+//       exit();
+//     }
+//     else{
+//       mysqli_stmt_bind_param($stmt, "i", $ratedIndex);
+//       mysqli_stmt_execute($stmt);
+//       header("Location: ../my_purchases.php?stars=submitted");
+//       exit();
 
+// mysqli_stmt_close($stmt);
+// mysqli_close($conn);
+// }
+// }
+   
+  
+?>
 
-    </ul>
+<head><script src="https://kit.fontawesome.com/eb3d5e1aa0.js" crossorigin="anonymous"></script></head>
+<div class="small-container">
+  <h2 class="title"> All of my purchases</h2>
+  <div class="row">
 
-  </nav>
+<?php
+  require_once('mysqli_connect.php');
+  $sql = "SELECT * FROM Purchase_Record NATURAL JOIN Product WHERE Buyer_ID=$User_ID;";
+  $result = mysqli_query($dbc,$sql);
+  $resultCheck = mysqli_num_rows($result);
 
+  if($resultCheck > 0){
+    while($row = mysqli_fetch_assoc($result)){
+?>
 
-  <?php
-  // require_once('mysqli_connect.php');
-  require 'includes/dbh.inc.php';
-
-  $id = $_SESSION['User_ID'];
-
-  // print_r($_SESSION['User_ID']);
-
-  $sql = "SELECT * FROM Purchase_Record WHERE Buyer_ID = 2;";
-  // $result = mysqli_query($dbc,$sql);
-  // $resultCheck = mysqli_num_rows($result);
-  $stmt = mysqli_stmt_init($conn);
-  if (!mysqli_stmt_prepare($stmt, $sql)) {
-      header("Location: ../my_purchases.php?error=sqlerror");
-      exit();
-    }
-    else{
-    mysqli_stmt_prepare($stmt, $sql);
-    mysqli_stmt_execute($stmt);
-    // $result = mysqli_stmt_get_result($stmt);
-    $result = $conn->query($sql);
-    $resultCheck = mysqli_stmt_num_rows($stmt);
-
-    if($resultCheck > 0){
-      $row = mysqli_fetch_assoc($result);
-      while($row = $result->fetch_assoc()){
+<main>
 
 
-  ?>
+<div class="col-4">
+      <img src="ProductImage/<?php echo $row['Product_ID']?>.png" alt="Image of Product" >
+      <h4><?php echo $row['Product_Name']; ?></h4>
+      <p>Seller ID: <?php echo $row['Seller_ID']; ?></p>
+      <p>Your price: $<?php echo $row['Price_Sell']; ?></p>
+      <p>Post date: <?php echo $row['Date_Post']; ?></p>
+      <p>Location: <?php echo $row['Location']; ?></p>
+      <p>Time of purchase: <?php echo $row['TimeOfPurchase']; ?></p>
+      <p>Description: <?php echo $row['Product_Description']; ?></p>
+      <form action="includes/review.inc.php" method="post" >
+             <textarea name="review" rows="10" cols="30">Your review here...</textarea>
+             <br><br>
+             <!-- <input type='text' name="review"> -->
+             <button type="submit" class="col-4-btn" name="review-submit">Submit Review</button>
+      </form>
+<!-- 
+      <p>Rate Overall Quality of Product</p>
+      <i class="fa fa-star fa-2x" data-index = "0"></i>
+      <i class="fa fa-star fa-2x" data-index = "1"></i>
+      <i class="fa fa-star fa-2x" data-index = "2"></i>
+      <i class="fa fa-star fa-2x" data-index = "3"></i>
+      <i class="fa fa-star fa-2x" data-index = "4"></i>
+      
 
-  <table>
-    <tr>
-      <td>Buyer ID </td>
-      <td><?php echo $row['Buyer_ID']; ?></td>
-    </tr>
-    <tr>
-      <td>Product ID </td>
-      <td><?php echo $row['Product_ID']; ?></td>
-    </tr>
-    <tr>
-      <td>Location </td>
-      <td><?php echo $row['Location']; ?></td>
-    </tr>
-    <tr>
-      <td>Time of Purchase</td>
-      <td><?php echo $row['TimeOfPurchase']; ?></td>
-    </tr>
-    <tr>
-      <td>Leave a Review</td>
-      <td><form action="includes/review.inc.php" method="post">
-              <input type='text' name="review" placeholder="Please give your reviews for this purchase here...">
-              <button type="submit" name="review-submit">Submit Review</button>
-          </form>
-      </td>
-    </tr>
+      <script src="http://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
 
-  </table>
+      <script>
+       
+        var ratedIndex = -1, uID = 0;
 
-  <br><br>
+        $(document).ready(function () {
+            resetStarColors();
 
-  <?php }
-  }else{
-    echo "You didn't buy anything";
-  } 
-    }?>
- 
+            if (localStorage.getItem('ratedIndex') != null) {
+                setStars(parseInt(localStorage.getItem('ratedIndex')));
+                uID = localStorage.getItem('uID');
+            }
 
-</body>
+            $('.fa-star').on('click', function () {
+               ratedIndex = parseInt($(this).data('index'));
+               localStorage.setItem('ratedIndex', ratedIndex);
+               saveToTheDB();
+            });
+
+            $('.fa-star').mouseover(function () {
+                resetStarColors();
+                var currentIndex = parseInt($(this).data('index'));
+                setStars(currentIndex);
+            });
+
+            $('.fa-star').mouseleave(function () {
+                resetStarColors();
+
+                if (ratedIndex != -1)
+                    setStars(ratedIndex);
+            });
+        });
+
+        function saveToTheDB() {
+            $.ajax({
+               url: "my_purchases.php",
+               method: "POST",
+               dataType: 'json',
+               data: {
+                   'save': 1,
+                   'uID': uID,
+                   'ratedIndex': ratedIndex
+               }, success: function (r) {
+                    uID = r.id;
+                    localStorage.setItem('uID', uID);
+               }
+            });
+        }
+
+        function setStars(max) {
+            for (var i=0; i <= max; i++)
+                $('.fa-star:eq('+i+')').css('color', 'orange');
+        }
+
+        function resetStarColors() {
+            $('.fa-star').css('color', 'white');
+        }
+      </script>
+ -->
+ <form action="includes/ratings.inc.php" method="post">
+      <div class="container">
+        <table class = "table table-striped">
+          <thead>
+            <tr>
+              <th>Rating Type</th>
+              <th>Your Ratings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="quality">
+              <td> Rate the Quality of Product</td>
+              <td>
+                <input type="number" name="quality" min="0" max="5" step=".1">
+              </td>
+            </tr>
+            <tr class="vs">
+              <td> Rate Product Description VS Quality</td>
+              <td>
+                <input type="number" name="vs" min="0" max="5" step=".1">
+              </td>
+            </tr>
+            <tr class="experience">
+              <td> Rate Your Purchase Experience</td>
+              <td>
+                <input type="number" name="experience" min="0" max="5" step=".1">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- <input type="hidden" id="sellerId" name="sellerId" value=$row['Seller_ID']> -->
+        <button type="submit" class="col-4-btn" name="ratings-submit">Submit Ratings</button>
+</div>
+</form>
+</div>
+
+
+
+<br><br>
+
+<?php }
+}else{
+  echo "You didn't buy anything";
+} ?>
+
+</main>
