@@ -154,9 +154,13 @@
         }
 
         ?>
-        <p>
-        <h2 class="title"> You may also like: <h2>
-        </p>
+</div>
+</div>
+        <div class="small-container">
+        <h2 class="title"> You may also like:</h2>
+        <div class="row">
+
+        
           <?php
 
 

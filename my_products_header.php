@@ -45,9 +45,9 @@
           <li> <a href="my_favorites.php">My Favorites</a></li>
           <li> <a href="my_reviews.php">My Reviews</a></li>
           <li> <a href="my_profile.php">My Profile</a></li>
-          <form action="includes/logout.inc.php" method="post">
+          <!-- <form action="includes/logout.inc.php" method="post">
             <button type="submit" name="logout-submit" class="button">LogOut</button>
-          </form>
+          </form> -->
         </ul>
       </nav>
       <!-- <img src="ProductImage/product1.png" alt="" style="width:30px"> -->
