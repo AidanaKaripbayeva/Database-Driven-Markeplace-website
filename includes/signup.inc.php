@@ -18,8 +18,7 @@ if (isset($_POST['signup-submit'])) {
 
 	$lat = $data->{'results'}[0]->{'geometry'}->{'location'}->{'lat'};
 	$lon = $data->{'results'}[0]->{'geometry'}->{'location'}->{'lng'};
-	echo $lat, $lon;
-
+	
 	// check for empty fields
 
 	if (empty($username) || empty($email) || empty($password) || empty($passwordrepeat)) {
@@ -80,6 +79,7 @@ if (isset($_POST['signup-submit'])) {
 				mysqli_stmt_bind_param($stmt, "ssssssss", $username, $email, $phone, $address, $zip, $hashedPwd, $lat, $lon);
 				mysqli_stmt_execute($stmt);
 				header("Location: ../signup.php?signup=success");
+				// header("Location: ../my_profile.php");
 				exit();
 			}
 		}

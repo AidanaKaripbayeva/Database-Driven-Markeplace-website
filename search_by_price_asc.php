@@ -10,7 +10,6 @@
 
 <main>
 
-
 <div class="container">
 <div class="navbar">
   <div class="dropdown">
@@ -32,17 +31,34 @@
       <button type="submit"><i class="fa fa-search"></i></button>
       <input type="number" placeholder="Min Price" id="minprice" name="minprice">
       <input type="number" placeholder="Max Price" id="maxprice" name="maxprice">
-      Sort By:
-      <select  name="sorting">
-        <option value="">Please Select</option>
-        <option value="price_asc">Price: Low to High</option>
-        <option value="price_desc">Price: High to Low</option>
-        <option value="location">Location</option>
-      </select>
+      <input type="number" placeholder="Location" id="location" name="location">
     </form>
     </div>
 	  <p></p>
   </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Sort by:</button>
+  <div class="dropdown-content">
+    <a href="#">Price: Low to High</a>
+    <a href="#">Price: High to Low</a>
+    <a href="#">Location</a>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-3">
+    <a href=top_seller.php? class="btn">Top Seller</a>
+  </div>
+  <div class="col-3">
+    <a href=generous_seller.php? class="btn">Generous Seller</a>
+  </div>
+  <!-- <div class="col-3">
+    <a href="#" class="btn"><i class="fa fa-home"></i> My Account</a>
+  </div> -->
+
 </div>
 
 
@@ -56,8 +72,6 @@
   <div class="row">
 <?php
     require_once('mysqli_connect.php');
-
-
 
     $query = $_POST['query'] ?? 0;
     // gets value sent over search form
@@ -101,28 +115,15 @@
             $c = 2 *atan2(sqrt($a), sqrt(1-$a));
             $distance = $R * $c;
 
-
-
             $row['distance'] = $distance;
             array_push($all_data, $row);
             }
 
+            $price = array_column($all_data, 'Price_Sell');
+            array_multisort($price, $all_data);
 
-            $selectOption = $_POST['sorting'];
 
 
-            if($selectOption == 'price_asc'){
-
-              $price = array_column($all_data, 'Price_Sell');
-              array_multisort($price, $all_data);
-            }elseif($selectOption == 'price_desc'){
-              $price = array_column($all_data, 'Price_Sell');
-              array_multisort($price, SORT_DESC, $all_data);
-            }else{
-              $distance= array_column($all_data, 'distance');
-              array_multisort($distance, $all_data);
-
-            }
             foreach($all_data as $row) {
                 ?>
                 <div class="col-4">
@@ -155,6 +156,6 @@
 
     }
     else{ // if query length is less than minimum
-        // echo "Minimum keyword length is ".$min_length;
+        echo "Minimum keyword length is ".$min_length;
     }
 ?>

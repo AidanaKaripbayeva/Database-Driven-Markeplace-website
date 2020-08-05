@@ -9,7 +9,7 @@
     <meta name = "description" content = "This is an website for students in UIUC">
     <meta name = viewport content = "width=device-width, initial-scale=1">
     <title> Marketpalce UIUC </title>
-    <link rel = "stylesheet" href='style_product.css'>
+    <link rel = "stylesheet" type="text/css" href='style_product.css?v=e031e80c3d8b'>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
   </head>
   <style>
@@ -19,7 +19,7 @@
   color: #fff;
   padding: 8px 30px;
   margin: 30px 0;
-  border-radius: 20px; 
+  border-radius: 20px;
   border-radius: 20px;
   transition: background 0.3s;
 }
@@ -43,7 +43,7 @@
         <div class="container">
           <div class = "navbar">
             <div class="logo">
-              <img src = "img/logo.png" alt = "logo" style="width:120px;height:100px;">
+              <!-- <img src = "img/logo1.png" alt = "logo" style="width:60px;height:50px;"> -->
             </div>
             <div style="padding-left:16px">
               <!-- <i><font style="font-family:monotype corsiva">Welcome to</font></i> -->
@@ -59,16 +59,6 @@
               </nav>
           </div>
         </div>
-        <!-- <a class = "header-logo" href = "testphp.php">
-          <img src = "img/logo.png" alt = "logo" style="width:100px;height:80px;">
-        </a>
-        <ul>
-          <li><a href = "testphp.php">Home</a></li>
-          <li><a href = "testphp.php">Log In</a></li>
-          <li><a href = "web.html">About Marketplace</a></li>
-          <li><a href = "my_profile.php">My Account</a></li>
-          <li><a href = "#">Contact</a></li>
-        </ul> -->
 
         <div class="button-container">
           <form action="includes/login.inc.php" method="post">
