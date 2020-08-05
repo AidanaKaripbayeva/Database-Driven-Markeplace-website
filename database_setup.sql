@@ -140,14 +140,14 @@ INSERT INTO `Product` (`Product_ID`, `Product_Name`, `Seller_ID`, `Product_image
 (18, 'book Surely, you are joking Mr. Feynman', 4, '18.png', 10, 15, 10, '2020-07-18', 0, 'Books', 'Surely You are Joking, Mr. Feynman!\": Adventures of a Curious Character as Told to Ralph Leighton (Arrow Books) (Paperback) - Common'),
 (19, 'book \"The color purple\"', 4, '19.png', 10, 15, 10, '2020-07-19', 0, 'Books', 'The Color Purple: A Novel Paperback by Alice Walker'),
 (20, 'JBL earpods ', 2, '20.png', 15, 40, 10, '2020-07-21', 0, 'Electronics', 'wireless JBL earpods, sometimes connection is not stable in one of the ears'),
-(21, 'Amazon Women Long Sleeve T-Shirt', 2, '21.png', 15, 30, 10, '2020-07-20', 0, 'Fashion', 'Longsleeve with Amazon Logo'),
+(21, 'Amazon Women Long Sleeve T-Shirt', 10, '21.png', 15, 30, 10, '2020-07-20', 0, 'Fashion', 'Longsleeve with Amazon Logo'),
 (22, 'Desk ', 2, '22.png', 50, 100, 10, '2020-07-20', 0, 'Furniture', 'Computer desk, size: 100*50*72CM (L*W*H : 39.4 * 19.7 * 28.3 Inches), Brown Desktop Black Frame.'),
-(23, 'Coffee table', 2, '23.png', 50, 75, 10, '2020-07-20', 0, 'Furniture', 'Small coffee table, size: 80*50*42CM'),
-(24, 'Desk Lamp', 2, '24.png', 25, 40, 10, '2020-07-20', 0, 'Furniture', 'Adjustable desk lamp '),
-(25, 'Cracking the Coding Interview, volume 2', 2, '25.png', 15, 27, 10, '2020-08-05', 0, 'Books', 'the interview preparation you need to get the top software developer jobs'),
-(26, 'AAAI Conference proceedings', 2, '26.png', 20, 40, 10, '2020-08-05', 0, 'Books', 'publication collection from AAAI 2020 conference'),
-(27, 'Computer table', 2, '27.png', 30, 60, 10, '2020-08-05', 0, 'Books', 'Portable Folding Table'),
-(28, 'Floor lamp', 2, '28.png', 10, 30, 10, '2020-08-05', 0, 'Furniture', 'Suitable for large bedroom');
+(23, 'Coffee table', 3, '23.png', 50, 75, 10, '2020-07-20', 0, 'Furniture', 'Small coffee table, size: 80*50*42CM'),
+(24, 'Desk Lamp', 4, '24.png', 25, 40, 10, '2020-07-20', 0, 'Furniture', 'Adjustable desk lamp '),
+(25, 'Cracking the Coding Interview, volume 2', 9, '25.png', 15, 27, 10, '2020-08-05', 0, 'Books', 'the interview preparation you need to get the top software developer jobs'),
+(26, 'AAAI Conference proceedings', 7, '26.png', 20, 40, 10, '2020-08-05', 0, 'Books', 'publication collection from AAAI 2020 conference'),
+(27, 'Computer table', 6, '27.png', 30, 60, 10, '2020-08-05', 0, 'Books', 'Portable Folding Table'),
+(28, 'Floor lamp', 1, '28.png', 10, 30, 10, '2020-08-05', 0, 'Furniture', 'Suitable for large bedroom');
 
 -- --------------------------------------------------------
 
