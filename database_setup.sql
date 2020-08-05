@@ -45,27 +45,27 @@ CREATE TABLE `Customer` (
 --
 
 INSERT INTO `Customer` (`User_ID`, `User_Name`, `Email`, `User_Password`, `Rating`, `Address`, `Phone`, `Zipcode`, `Lat`, `Lon`) VALUES
-(1, 'Jianjia', 'jianjia2@illinois.edu', 'nnttfozf123.', 4.5, '1903N Lincoln Ave', '2173050751', 61801, 40.129822, -88.22069),
-(2, 'alena.sorokina', 'alena3@illinois.edu', 'mypassword123', 4.5, '308 E Green str', '2174197091', 61820, 40.111054, -88.203975),
-(3, 'Vardhan', 'vdongre2@illinois.edu', 'some_k3yw0rd', 4.5, '48 E John Street', '2170000000', 61820, 40.111054, -88.203975),
-(4, 'aidana', 'aidana2@illinois.edu', 'aidana_96', 4.5, '308 E Green str', '2170000000', 61820, 40.111054, -88.203975),
-(5, 'Kelin', 'kelind2@illinois.edu', 'skhauia1n2g3', 4.5, '402 s wright st', '2170000000', 61820, 40.111054, -88.203975),
-(6, 'Sparsh', 'sparsha2@illinois.edu', 'spa2019', 4.5, '402 s wright st', '2170000000', 61820, 40.111054, -88.203975),
-(7, 'Altaf', 'sheikaltaf@gmail.com', '$2y$10$/T9CTYjOLvek5YBn7volhOxnrnWCaxIVpGbOW5wrlQPJJyjm3KR1G', NULL, '305 s white st', '217-908-9190', 61820, NULL, NULL),
-(8, 'Meera', 'mnair@gmail.com', '$2y$10$etyTkU2RFJgWR2/5P3hmI.NQzks5uoKxzW2eJoRgv7H/paccGFD9S', NULL, NULL, '718-910-8989', 61820, NULL, NULL),
-(9, 'myrad', 'myranda@yahoo.com', '$2y$10$DDUPzVCI6SqN4Y67dp75we1DcTTW13sPezSkR1cIkoo38og6fw/Ge', NULL, NULL, '217-512-0987', 61820, NULL, NULL),
-(10, 'martinjones', 'jones@hotmail.com', '$2y$10$9dursXXM2fA67MNHjDytgOeS576sCqk0.pbkCfe6KUv/fn4iX4XgK', NULL, NULL, '312-987-5678', 61820, NULL, NULL),
-(11, 'patrinick', 'patrnico2@illinois.edu', '$2y$10$DRI4N1uMaLhb/0VnO1TGh.uYVGrQGxyXU1KNLo6DSwo58mkisL17S', NULL, NULL, '712-212-4345', 61820, NULL, NULL),
-(12, 'michael', 'neal@illinois.edu', '$2y$10$EeoUQeZWGyrou3OpkDLjEOl37VX0ms5XF1fJtXLd5n/mw1RnFv6Ha', NULL, NULL, '312-234-4567', 61820, NULL, NULL),
-(13, 'akash', 'jain2@illinois.edu', '$2y$10$F1D/pKn4yKouAiTyCrHETeS3jMRvpePsB4uchxaMi7twWuJYTcBQq', NULL, NULL, '312-241-2324', 61820, NULL, NULL),
-(14, 'jessica', 'jjones@illinois.edu', '$2y$10$P8Ha/8S7UuiQ3knR.XEBYe8yfmCi4kuGX8PMFF6ujECd0NbJaR7le', NULL, NULL, '312-121-1121', 61820, NULL, NULL),
-(15, 'miranda', 'mira3@illinois.edu', '$2y$10$BiouznUgMvtE/fd8nvvUHeJdLXJ1BRxTWElzwQJX930vfraqIHIIa', NULL, NULL, '217-821-9809', 61820, NULL, NULL),
-(16, 'olyuwa', 'osammy2@illinois.edu', '$2y$10$uCYCTgWuHvQiJzyIaSUBTu6iG4/4Vw2N9CDZWT3SCUlgg7ZtnRbem', NULL, NULL, '312-234-8978', 61820, NULL, NULL),
-(17, 'idah', 'imdeani@illinois.edu', '$2y$10$WPkQw4Q7t5CSvKmWsMm./uBoY9TdWmDyrcNjKYNVSVHDCmwU56Fai', NULL, NULL, '512-212-2634', 61820, NULL, NULL),
-(18, 'hyoun', 'hlee2@illinois.edu', '$2y$10$vbKLSur4jHaeqa.jxq96v.Zsd92vLbSyPZ.Sthm/BHM4QA7uU4Fca', NULL, NULL, '217-987-9876', 61820, NULL, NULL),
-(19, 'dustin', 'dxiao2@illinois.edu', 'qwerty', NULL, NULL, '312-234-9876', 61820, NULL, NULL),
-(20, 'vivek', 'vdon2@illinois.edu', 'qwerty', NULL, NULL, '989-786-8789', 61820, NULL, NULL),
-(21, 'jimbo', 'jimmy2@illinois.edu', '1234qwerty', 4.2, NULL, '312-290-8000', 61820, NULL, NULL),
+(1, 'Jianjia', 'jianjia2@illinois.edu', 'nnttfozf123.', 4.93, '1903N Lincoln Ave', '2173050751', 61801, 40.129822, -88.22069),
+(2, 'alena.sorokina', 'alena3@illinois.edu', 'mypassword123', 4.99, '308 E Green st', '2174197091', 61820, 40.111054, -88.203975),
+(3, 'Vardhan', 'vdongre2@illinois.edu', 'some_k3yw0rd', 4.98, '48 E John Street', '2170000000', 61820, 40.111054, -88.203975),
+(4, 'aidana', 'aidana2@illinois.edu', 'aidana_96', 4.97, '308 E Green st', '2170000000', 61820, 40.111054, -88.203975),
+(5, 'Kelin', 'kelind2@illinois.edu', 'skhauia1n2g3', 4.92, '309 E Green st', '2170000000', 61820, 40.110230, -88.234221),
+(6, 'Sparsh', 'sparsha2@illinois.edu', 'spa2019', 4.85, '402 s wright st', '2170000000', 61820, 40.111054, -88.203975),
+(7, 'Altaf', 'sheikaltaf@gmail.com', '$2y$10$/T9CTYjOLvek5YBn7volhOxnrnWCaxIVpGbOW5wrlQPJJyjm3KR1G', 4.83, '305 s white st', '217-908-9190', 61820, 40.119570, -88.234232),
+(8, 'Meera', 'mnair@gmail.com', '$2y$10$etyTkU2RFJgWR2/5P3hmI.NQzks5uoKxzW2eJoRgv7H/paccGFD9S', 4.84, '1000-1098 W Clark St', '718-910-8989', 61820, 40.115783, -88.221175),
+(9, 'myrad', 'myranda@yahoo.com', '$2y$10$DDUPzVCI6SqN4Y67dp75we1DcTTW13sPezSkR1cIkoo38og6fw/Ge', 4.89, '601 E White St', '217-512-0987', 61820, 40.114448, -88.229898),
+(10, 'martinjones', 'jones@hotmail.com', '$2y$10$9dursXXM2fA67MNHjDytgOeS576sCqk0.pbkCfe6KUv/fn4iX4XgK', 4.90, '507 E Clark St', '312-987-5678', 61820, 40.115260, -88.231143),
+(11, 'patrinick', 'patrnico2@illinois.edu', '$2y$10$DRI4N1uMaLhb/0VnO1TGh.uYVGrQGxyXU1KNLo6DSwo58mkisL17S', 4.91, '601 E White St', '712-212-4345', 61820, 40.114456, -88.229941),
+(12, 'michael', 'neal@illinois.edu', '$2y$10$EeoUQeZWGyrou3OpkDLjEOl37VX0ms5XF1fJtXLd5n/mw1RnFv6Ha', 4.93, '305 s white st', '312-234-4567', 61820, 40.119570, -88.234232),
+(13, 'akash', 'jain2@illinois.edu', '$2y$10$F1D/pKn4yKouAiTyCrHETeS3jMRvpePsB4uchxaMi7twWuJYTcBQq', 4.99, '305 s white st', '312-241-2324', 61820, 40.119570, -88.234232),
+(14, 'jessica', 'jjones@illinois.edu', '$2y$10$P8Ha/8S7UuiQ3knR.XEBYe8yfmCi4kuGX8PMFF6ujECd0NbJaR7le', 4.87, '305 s white st', '312-121-1121', 61820, 40.119570, -88.234232),
+(15, 'miranda', 'mira3@illinois.edu', '$2y$10$BiouznUgMvtE/fd8nvvUHeJdLXJ1BRxTWElzwQJX930vfraqIHIIa', 4.67, '601 E White St', '217-821-9809', 61820, 40.114456, -88.229941),
+(16, 'olyuwa', 'osammy2@illinois.edu', '$2y$10$uCYCTgWuHvQiJzyIaSUBTu6iG4/4Vw2N9CDZWT3SCUlgg7ZtnRbem', 4.78, '601 E White St', '312-234-8978', 61820, 40.114456, -88.229941),
+(17, 'idah', 'imdeani@illinois.edu', '$2y$10$WPkQw4Q7t5CSvKmWsMm./uBoY9TdWmDyrcNjKYNVSVHDCmwU56Fai', 4.89, '507 E Clark St', '512-212-2634', 61820, 40.115260, -88.231143),
+(18, 'hyoun', 'hlee2@illinois.edu', '$2y$10$vbKLSur4jHaeqa.jxq96v.Zsd92vLbSyPZ.Sthm/BHM4QA7uU4Fca', 4.25, '507 E Clark St', '217-987-9876', 61820, 40.115260, -88.231143),
+(19, 'dustin', 'dxiao2@illinois.edu', 'qwerty', 4.8, '508 E White St', '312-234-9876', 61820, 40.114768, -88.231228),
+(20, 'vivek', 'vdon2@illinois.edu', 'qwerty', 4.4, '508 E White St', '989-786-8789', 61820, 40.114768, -88.231228),
+(21, 'jimbo', 'jimmy2@illinois.edu', '1234qwerty', 4.2, '508 E White St', '312-290-8000', 61820, 40.114768, -88.231228),
 (22, 'Amanda', 'aspencer2@illinois.edu', 'qwerty', 4.5, '310 E Springfield Ave', '2170000000', 61820, 40.113344, -88.235058),
 (23, 'Nicole', 'nspencer2@illinois.edu', 'qwerty', 4.5, '310 E Springfield Ave', '2170000000', 61820, 40.113344, -88.235058);
 
@@ -90,7 +90,10 @@ INSERT INTO `Favorite` (`Favorite_ID`, `User_ID`, `Product_ID`) VALUES
 (2, 1, 4),
 (3, 1, 20),
 (4, 4, 1),
-(5, 4, 8);
+(5, 4, 8),
+(6, 2, 2),
+(7, 2, 4),
+(8, 2, 20);
 
 -- --------------------------------------------------------
 
@@ -140,7 +143,11 @@ INSERT INTO `Product` (`Product_ID`, `Product_Name`, `Seller_ID`, `Product_image
 (21, 'Amazon Women Long Sleeve T-Shirt', 2, '21.png', 15, 30, 10, '2020-07-20', 0, 'Fashion', 'Longsleeve with Amazon Logo'),
 (22, 'Desk ', 2, '22.png', 50, 100, 10, '2020-07-20', 0, 'Furniture', 'Computer desk, size: 100*50*72CM (L*W*H : 39.4 * 19.7 * 28.3 Inches), Brown Desktop Black Frame.'),
 (23, 'Coffee table', 2, '23.png', 50, 75, 10, '2020-07-20', 0, 'Furniture', 'Small coffee table, size: 80*50*42CM'),
-(24, 'Desk Lamp', 2, '24.png', 25, 40, 10, '2020-07-20', 0, 'Furniture', 'Adjustable desk lamp ');
+(24, 'Desk Lamp', 2, '24.png', 25, 40, 10, '2020-07-20', 0, 'Furniture', 'Adjustable desk lamp '),
+(25, 'Cracking the Coding Interview, volume 2', 2, '25.png', 15, 27, 10, '2020-08-05', 0, 'Books', 'the interview preparation you need to get the top software developer jobs'),
+(26, 'AAAI Conference proceedings', 2, '26.png', 20, 40, 10, '2020-08-05', 0, 'Books', 'publication collection from AAAI 2020 conference'),
+(27, 'Computer table', 2, '27.png', 30, 60, 10, '2020-08-05', 0, 'Books', 'Portable Folding Table'),
+(28, 'Floor lamp', 2, '28.png', 10, 30, 10, '2020-08-05', 0, 'Furniture', 'Suitable for large bedroom');
 
 -- --------------------------------------------------------
 
