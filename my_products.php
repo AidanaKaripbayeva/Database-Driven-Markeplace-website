@@ -49,7 +49,6 @@
       <h4><?php echo $row['Product_Name']; ?></h4>
       <p>Your price: $<?php echo $row['Price_Sell']; ?></p>
       <p>Price in market: $<?php echo $row['Price_New']; ?></p>
-      <p>Suggested selling price: $<?php echo $row['Price_Recommend']; ?></p>
       <p>Post date: <?php echo $row['Date_Post']; ?></p>
       <p>Description: <?php echo $row['Product_Description']; ?></p>
 

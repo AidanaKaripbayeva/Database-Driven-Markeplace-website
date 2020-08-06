@@ -30,7 +30,10 @@ if (isset($_POST['signup-submit'])) {
 		header("Location: ../signup.php?error=invalidmailuid");
 		exit();
 	}
-
+  else if (!preg_match("/^[a-zA-Z0-9._%+-]+@illinois+\.edu$/", $email)) {		
+    header("Location: ../signup.php?error=invalidEmail&uid=".$username);		
+    exit();	
+  }
 	else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 		header("Location: ../signup.php?error=invalidEmail&uid=".$username);
 		exit();

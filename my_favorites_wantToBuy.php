@@ -38,7 +38,7 @@
         <!-- Product Description -->
         <div class="product-description">
           <span>Category: <?php echo $row['Category']; ?></span>
-          <h1>Beats EP</h1>
+          <h1> <?php echo $row['Product_Name']; ?> </h1>
           <p>Price in market: $<?php echo $row['Price_New']; ?></p>
           <p>Suggested selling price: $<?php echo $row['Price_Recommend']; ?></p>
           <p>Post date: <?php echo $row['Date_Post']; ?></p>
